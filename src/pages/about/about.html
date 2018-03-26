@@ -1,11 +1,53 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Courses
-    </ion-title>
+  <ion-navbar  color= "primary">
+    <ion-title>Courses</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      First Semester
+    </ion-list-header>
+    <a ion-item (click)="openModal({charNum: 0})">
+        Samsung Android Application Development
+    </a>
+    <a ion-item (click)="openModal({charNum: 1})">
+        Web Technologies for Mobile Platforms
+    </a>
+    <a ion-item (click)="openModal({charNum: 2})">
+      	Enterprise Technologies for Mobile Platforms
+    </a>
+    <a ion-item (click)="openModal({charNum: 3})">
+      	iOS Development
+    </a>    
+    <a ion-item (click)="openModal({charNum: 4})">
+      	Mobile Application UI/UX Design
+    </a>
+    </ion-list>
+
+  <ion-list>
+      <ion-list-header>
+        Second Semester
+      </ion-list-header>
+      <a ion-item (click)="openModal({charNum: 5})">
+          Samsung Advanced Android Development
+      </a>
+      <a ion-item (click)="openModal({charNum: 6})">
+          Mobile Web Development
+      </a>
+      <a ion-item (click)="openModal({charNum: 7})">
+          Advanced iOS Development
+      </a>
+      <a ion-item (click)="openModal({charNum: 8})">
+          Emerging Technologies
+      </a>
+      <a ion-item (click)="openModal({charNum: 9})">
+          Mobile Application Development Project
+      </a>
+    </ion-list>
+  
 
 </ion-content>
+
