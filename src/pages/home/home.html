@@ -1,17 +1,34 @@
 <ion-header>
   <ion-navbar color= "primary">
-    <ion-title>Home</ion-title>
+    <ion-title>Centennial College</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding>  
+  <h3>Mobile Application Development</h3>
+<p>
+    Centennial College's Mobile Applic ations Development program ensures you develop the necessary skills to enter the fast-growing mobile software applications ("apps") development market.
+</p><p>
+    In this graduate certificate program's Mobile Application Development courses, you learn to develop mobile apps for Google Android and Apple iOS devices. In addition to core fundamental courses, the offering covers advanced topics in mobile app development, web and enterprise technologies, user interface (UI), user experience (UX), emerging technologies and more.
+  </p><p>
+    The knowledge you gain in this college technology program applied in a capstone project to develop mobile apps for business, gaming, health care, social networks, the internet of things and other areas of interest to which your imaginations takes you.
+</p>
+
+<ion-card>
+  <ion-card-header (click)="toggleAccordion()">
+    <ion-list *ngFor="let item of items">
+      <ion-item >
+        <button ion-button clear small icon-only item-right>
+          <ion-icon color="secondary" [name]="icon"></ion-icon>
+        </button>
+        {{ item.name }}
+      </ion-item>
+    </ion-list>
+
+  </ion-card-header>
+  <ion-card-content #cc>
+    
+  </ion-card-content>
+</ion-card>
+
 </ion-content>

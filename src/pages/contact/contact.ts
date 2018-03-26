@@ -21,14 +21,7 @@ export class ContactPage {
       'Cairo',
       'Dhaka',
       'Edinburgh',
-      'Geneva',
-      'Genoa',
-      'Glasglow',
-      'Hanoi',
-      'Hong Kong',
-      'Islamabad',
-      'Istanbul',
-      'Washington'
+      'Geneva'
     ];
   }
 
