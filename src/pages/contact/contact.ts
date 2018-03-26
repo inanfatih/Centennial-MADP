@@ -15,13 +15,10 @@ export class ContactPage {
 
   initializeItems() {
     this.items = [
-      'Amsterdam',
-      'Bogota',
-      'Buenos Aires',
-      'Cairo',
-      'Dhaka',
-      'Edinburgh',
-      'Geneva'
+      'Irvin Kaur',
+      'Kamalpreet Singh',
+      'Robert Argume',
+      'Fatih Inan'
     ];
   }
 
