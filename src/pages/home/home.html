@@ -1,17 +1,23 @@
 <ion-header>
-  <ion-navbar color= "primary">
+  <ion-navbar color= "secondary">
     <ion-title>Centennial College</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>  
   <h3>Mobile Application Development</h3>
+  <div class="list card">
+    <div class="item item-image" id="image-container">
+      <img src="../../../assets/imgs/mainScreenImage.jpg">
+    </div>
+  </div>
 <p>
     Centennial College's Mobile Applic ations Development program ensures you develop the necessary skills to enter the fast-growing mobile software applications ("apps") development market.
 </p>
 
 
-  <ion-list class="accordion-list">
+
+<ion-list class="accordion-list">
     <!-- First Level -->
     <ion-list-header *ngFor="let item of information; let i = index" no-lines no-padding>
       <!-- Toggle Button -->

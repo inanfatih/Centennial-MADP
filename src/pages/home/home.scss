@@ -9,13 +9,13 @@ page-home {
         margin-bottom: 4px;
     }
     .section-active {
-        background: #ffc400;
+        background: #DCE359;
         color: #fff;
     }
  
     .child {
-        background: #e8e7e6;
-        color: #000;
+        background: #464648;
+        color: #fff;
         margin-bottom: 4px;
     }
     .child-item {
@@ -28,4 +28,7 @@ page-home {
     .list {
         margin-bottom: 4px;
     }
+    .item-image img:first-child {
+        position: relative;
+      }
 }
