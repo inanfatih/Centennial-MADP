@@ -9,15 +9,15 @@
 <ion-content>
   
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-
-        <ion-card *ngFor="let item of instructors">
+<ion-item *ngFor="let item of items">
+        <ion-card >
 
       <ion-card-header padding-left padding-top> {{ item.instructor }}</ion-card-header>
       
-      <ion-note > <h4 padding-left>Courses given: {{ item.courses }} </h4></ion-note>
+      <ion-note > <h4 padding-left>Courses: {{ item.courses }} </h4></ion-note>
       <ion-note> <h4 padding-left>Email: {{ item.email }} </h4></ion-note>
       <ion-note> <h4 padding-left padding-bottom>Phone: {{ item.phone }} </h4></ion-note>
         </ion-card>
 
-
+      </ion-item>
 </ion-content>

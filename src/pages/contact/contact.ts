@@ -8,152 +8,67 @@ import { NavController } from 'ionic-angular';
 })
 
 export class ContactPage {
-  items;
+  searchQuery: string = '';
   constructor(public navCtrl: NavController) {
     this.initializeItems();
   }
-  instructors;
+  items;
 
   initializeItems() {
 
     
-    this.instructors = [
+    this.items = [
       {
-        instructor: 'Instructor1',
-        courses: 'MADP-711',
-        email: 'email@centennialcollege.ca',
-        phone: '416 123 4567'
+        instructor: 'Przemyslaw Pawluk',
+        courses: 'MAPD-712, MADP-722',
+        email: 'vzaytsev@my.centennialcollege.ca',
+        phone: '416-289-5000'
       },
       {
-        instructor: 'Instructor2',
-        courses: 'MADP-711',
-        email: 'email@centennialcollege.ca',
-        phone: '416 123 4567'
+        instructor: 'Viktor V. Zaytsev',
+        courses: 'MADP-713, MADP-721, MADP-726',
+        email: 'vzaytsev@my.centennialcollege.ca',
+        phone: '416-289-5000'
       },
       {
-        instructor: 'Instructor3',
-        courses: 'MADP-711',
-        email: 'email@centennialcollege.ca',
-        phone: '416 123 4567'
+        instructor: 'Tom Tsiliopoulos',
+        courses: 'MADP-714, MADP-724',
+        email: 'ttsilop@my.centennialcollege.ca',
+        phone: '416-289-5000'
       },
       {
-        instructor: 'Instructor4',
-        courses: 'MADP-711',
-        email: 'email@centennialcollege.ca',
-        phone: '416 123 4567'
+        instructor: 'Charles Lai',
+        courses: 'MADP-725',
+        email: 'clai70@my.centennialcollege.ca',
+        phone: '416-289-5000'
       },
       {
-        instructor: 'Instructor5',
+        instructor: 'Vinayagathas Vaithilingam',
         courses: 'MADP-711',
-        email: 'email@centennialcollege.ca',
-        phone: '416 123 4567'
+        email: 'vvaithi3@my.centennialcollege.ca',
+        phone: '416-289-5000'
       },
       {
-        instructor: 'Instructor6',
-        courses: 'MADP-711',
-        email: 'email@centennialcollege.ca',
-        phone: '416 123 4567'
+        instructor: 'Genco Cebecioglu',
+        courses: 'MADP-715',
+        email: 'gcebecio@my.centennialcollege.ca',
+        phone: '416-289-5000'
       }
     ];
   }
 
-    
-
-  getItems(ev) {
+  getItems(ev: any) {
     // Reset items back to all of the items
     this.initializeItems();
 
-    // set val to the value of the ev target
-    var val = ev.target.value;
+    // set val to the value of the searchbar
+    let val = ev.target.value;
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.instructors = this.instructors.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      this.items = this.items.filter((item) => {
+        return (item.instructor.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
 }
-
-
-
-//html de asagidaki gibi geciyor filtreleme kismi
-
-// <div class='col-md-4'>
-// <input type='text' [(ngModel)]='listFilter' />
-// </div>
-
-
-///This will be used for filtering:
-
-// import { Component, OnInit } from '@angular/core';
-// import { IProduct } from './product';
-
-// @Component({
-//     selector: 'pm-products',
-//     templateUrl: './product-list.component.html',
-//     styleUrls: ['./product-list.component.css']
-// })
-// export class ProductListComponent implements OnInit {
-//     pageTitle: string = 'Product List';
-//     imageWidth: number = 50;
-//     imageMargin: number = 2;
-//     showImage: boolean = false;
-
-//     _listFilter: string;
-//     get listFilter(): string {
-//         return this._listFilter;
-//     }
-//     set listFilter(value: string) {
-//         this._listFilter = value;
-//         this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
-//     }
-
-//     filteredProducts: IProduct[];
-//     products: IProduct[] = [
-//         {
-//             "productId": 2,
-//             "productName": "Garden Cart",
-//             "productCode": "GDN-0023",
-//             "releaseDate": "March 18, 2016",
-//             "description": "15 gallon capacity rolling garden cart",
-//             "price": 32.99,
-//             "starRating": 4.2,
-//             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
-//         },
-//         {
-//             "productId": 5,
-//             "productName": "Hammer",
-//             "productCode": "TBX-0048",
-//             "releaseDate": "May 21, 2016",
-//             "description": "Curved claw steel hammer",
-//             "price": 8.9,
-//             "starRating": 4.8,
-//             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
-//         }
-//     ];
-
-//     constructor() {
-//         this.filteredProducts = this.products;
-//         this.listFilter = 'cart';
-//     }
-
-//     performFilter(filterBy: string): IProduct[] {
-//         filterBy = filterBy.toLocaleLowerCase();
-//         return this.products.filter((product: IProduct) =>
-//               product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
-//     }
-
-//     toggleImage(): void {
-//         this.showImage = !this.showImage;
-//     }
-
-//     ngOnInit(): void {
-//         console.log('In OnInit');
-//     }
-// }
-
-
-
-
-
