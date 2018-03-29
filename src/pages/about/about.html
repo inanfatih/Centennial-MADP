@@ -1,15 +1,32 @@
 <ion-header>
-  <ion-navbar  color= "secondary">
-    <ion-title>Courses</ion-title>
-  </ion-navbar>
+    <ion-navbar color="secondary">
+        <ion-title>Courses</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
+    <ion-list>
+        <ion-item-divider>
+            <h1> First Semester </h1>
+        </ion-item-divider>
+        <ion-item *ngFor="let item of fallCourses" >
+            {{ item.title }}
+        </ion-item>
+
+            <ion-item-divider>
+                <h1> Second Semester </h1>
+            </ion-item-divider>
+            <ion-item *ngFor="let item of winterCourses">
+                {{ item.title }}
+            </ion-item>
+        </ion-list>
+    
+    <!-- <ion-list>
     <ion-list-header>
       First Semester
-    </ion-list-header>
+ </ion-list-header>
+
     <a ion-item (click)="openModal({charNum: 0})">
         Samsung Android Application Development
     </a>
@@ -46,8 +63,7 @@
       <a ion-item (click)="openModal({charNum: 9})">
           Mobile Application Development Project
       </a>
-    </ion-list>
-  
+    </ion-list> -->
+
 
 </ion-content>
-
