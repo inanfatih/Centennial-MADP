@@ -14,5 +14,24 @@
 
 
 <ion-content padding>
+  <ion-item>
+    <ion-card *ngFor="let item of items">
+
+      <ion-card-header padding-left padding-top>{{ item.commentBy }}</ion-card-header>
+      
+      <ion-note><h4 padding-left>{{ item.comments }}</h4></ion-note>
+      <ion-note padding-right padding-bottom float-right><i><small padding-left>{{ item.createdOn }}</small></i></ion-note>
+      
+    </ion-card>
+  </ion-item>
+  
 
 </ion-content>
+<ion-footer>
+  <form (ngSubmit)="saveComments()">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="comments" name="comments" placeholder="Write comments..."></ion-input>
+      <button ion-button item-right type="submit">Send</button>
+    </ion-item>    
+  </form>
+</ion-footer>
