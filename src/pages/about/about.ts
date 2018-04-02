@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ModalController, NavController } from 'ionic-angular';
+import { CourseDetailPage } from '../course-detail/course-detail';
 
 @Component({
   selector: 'page-about',
@@ -14,6 +15,12 @@ export class AboutPage {
 
   fallCourses;
   winterCourses;
+
+  viewItem(item){
+    this.navCtrl.push(CourseDetailPage, {
+      item: item
+    });
+  }
 
   openModal(characterNum){
     let modal = this.modalCtrl.create('ModalPage', characterNum);

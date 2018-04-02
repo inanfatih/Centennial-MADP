@@ -10,14 +10,14 @@
         <ion-item-divider>
             <h1> First Semester </h1>
         </ion-item-divider>
-        <ion-item *ngFor="let item of fallCourses" >
+        <ion-item *ngFor="let item of fallCourses" (click)="viewItem(item)">
             {{ item.title }}
         </ion-item>
 
             <ion-item-divider>
                 <h1> Second Semester </h1>
             </ion-item-divider>
-            <ion-item *ngFor="let item of winterCourses">
+            <ion-item *ngFor="let item of winterCourses" (click)="viewItem(item)">
                 {{ item.title }}
             </ion-item>
         </ion-list>

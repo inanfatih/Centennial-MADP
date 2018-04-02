@@ -8,6 +8,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CommentsPage } from '../pages/comments/comments'
+import { CourseDetailPage } from '../pages/course-detail/course-detail'
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +22,8 @@ import { HttpModule } from '@angular/http'
     ContactPage,
     HomePage,
     TabsPage,
-    CommentsPage
+    CommentsPage,
+    CourseDetailPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { HttpModule } from '@angular/http'
     ContactPage,
     HomePage,
     TabsPage,
-    CommentsPage
+    CommentsPage,
+    CourseDetailPage
   ],
   providers: [
     StatusBar,
