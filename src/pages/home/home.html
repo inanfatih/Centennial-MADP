@@ -40,14 +40,14 @@
           <!-- Direct Add Button as Fallback -->
           <ion-item *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
             <h2>{{ child.name }}</h2>
-            <p text-lowercase>{{ child.information }}</p>
+            <p>{{ child.information }}</p>
           </ion-item>
  
           <ion-list *ngIf="child.children && child.open">
             <!-- Third Level -->
             <ion-item *ngFor="let item of child.children; let k = index" detail-none class="child-item" text-wrap>
               <h2>{{ item.name }}</h2>
-              <p text-lowercase>{{ item.information }}</p>
+              <p>{{ item.information }}</p>
             </ion-item>
           </ion-list>
  
