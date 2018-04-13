@@ -15,6 +15,23 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http'
 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+
+
+// for AngularFireDatabase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
+const config = {
+  apiKey: "AIzaSyDcS5lYydMW3jA1f5cxdq3kMfPq3ENJvnA",
+  authDomain: "mapd-db.firebaseapp.com",
+  databaseURL: "https://mapd-db.firebaseio.com",
+  projectId: "mapd-db",
+  storageBucket: "mapd-db.appspot.com",
+  messagingSenderId: "160255075961"
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -28,6 +45,9 @@ import { HttpModule } from '@angular/http'
   imports: [
     BrowserModule,
     HttpModule,
+    HttpClientModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(config),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -43,6 +63,9 @@ import { HttpModule } from '@angular/http'
   providers: [
     StatusBar,
     SplashScreen,
+    HttpClientModule,
+    AngularFireDatabase,
+    AngularFireDatabaseModule,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

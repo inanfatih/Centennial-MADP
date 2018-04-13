@@ -9,7 +9,7 @@
 <ion-content>
   
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-<ion-item *ngFor="let item of items">
+<ion-item *ngFor="let item of items | async">
         <ion-card >
 
       <ion-card-header padding-left padding-top> {{ item.instructor }}</ion-card-header>

@@ -19,9 +19,9 @@
 
 <ion-list class="accordion-list">
     <!-- First Level -->
-    <ion-list-header *ngFor="let item of information; let i = index" no-lines no-padding>
+    <ion-list-header *ngFor="let item of information | async; let i = index" no-lines no-padding>
       <!-- Toggle Button -->
-      <button ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
+      <button ion-item (click)="toggleSection(item)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
         <ion-icon item-left name="arrow-forward" *ngIf="!item.open"></ion-icon>
         <ion-icon item-left name="arrow-down" *ngIf="item.open"></ion-icon>
           {{ item.name }}
@@ -31,7 +31,7 @@
         <!-- Second Level -->
         <ion-list-header *ngFor="let child of item.children; let j = index" no-padding>
           <!-- Toggle Button -->
-          <button ion-item (click)="toggleItem(i, j)" *ngIf="child.children" class="child" detail-none>
+          <button ion-item (click)="toggleSection(child)" *ngIf="child.children" class="child" detail-none>
             <ion-icon item-left name="add" *ngIf="!child.open"></ion-icon>
             <ion-icon item-left name="close" *ngIf="child.open"></ion-icon>
             {{ child.name }}

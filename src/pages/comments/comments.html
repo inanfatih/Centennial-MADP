@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <ion-item>
-    <ion-card *ngFor="let item of items">
+    <ion-card *ngFor="let item of items | async">
 
       <ion-card-header padding-left padding-top>{{ item.commentBy }}</ion-card-header>
       
@@ -29,6 +29,9 @@
 </ion-content>
 <ion-footer>
   <form (ngSubmit)="saveComments()">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="username" name="username" placeholder="User Name"></ion-input>
+    </ion-item>  
     <ion-item>
       <ion-input type="text" [(ngModel)]="comments" name="comments" placeholder="Write comments..."></ion-input>
       <button ion-button item-right type="submit">Send</button>
