@@ -8,6 +8,16 @@
 
   <ion-navbar color= "secondary">
     <ion-title>Comments</ion-title>
+    
+        <label style="margin-left:20px">{{greeting}}</label>
+        <ion-buttons end>
+            <button ion-button  *ngIf="loggedIn" (click)="logout()">
+                <span ion-text color="dark">Logout</span>
+            </button> 
+        </ion-buttons>
+  
+    
+    
   </ion-navbar>
 
 </ion-header>
@@ -29,9 +39,6 @@
 </ion-content>
 <ion-footer>
   <form (ngSubmit)="saveComments()">
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="username" name="username" placeholder="User Name"></ion-input>
-    </ion-item>  
     <ion-item>
       <ion-input type="text" [(ngModel)]="comments" name="comments" placeholder="Write comments..."></ion-input>
       <button ion-button item-right type="submit">Send</button>

@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar  color= "secondary">
+      <ion-title>
+        Login
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-card>
+          <ion-card-content>
+          <form>
+              <ion-item>
+                <ion-input type="text" [(ngModel)]="username" name="username" placeholder="User Name"></ion-input>
+              </ion-item>  
+              <ion-item>
+                <ion-input type="text" [(ngModel)]="password" name="comments" placeholder="Password"></ion-input>
+              </ion-item>  
+              
+              <ion-buttons end>
+                  <button ion-button (click)="dismiss()">
+                    <span ion-text color="light">Close</span>
+                  </button>
+                  <button ion-button (click)="login()">
+                      <span ion-text color="light">Login</span>
+                  </button>
+                  <button ion-button (click)="register()">
+                      <span ion-text color="light">Register</span>
+                  </button>
+              </ion-buttons>
+             
+          </form>
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>

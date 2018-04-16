@@ -10,7 +10,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { CommentsPage } from '../pages/comments/comments'
 import { CourseDetailPage } from '../pages/course-detail/course-detail'
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http'
@@ -23,6 +22,8 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
+import { AngularFireAuth } from "angularfire2/auth";
+
 const config = {
   apiKey: "AIzaSyDcS5lYydMW3jA1f5cxdq3kMfPq3ENJvnA",
   authDomain: "mapd-db.firebaseapp.com",
@@ -66,6 +67,7 @@ const config = {
     HttpClientModule,
     AngularFireDatabase,
     AngularFireDatabaseModule,
+    AngularFireAuth,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
